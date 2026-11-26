@@ -1,0 +1,26 @@
+$ink: #242723;
+$paper: #f6f3ec;
+$accent: #42604c;
+* { box-sizing: border-box; }
+body { margin: 0; background: $paper; color: $ink; font-family: system-ui, sans-serif; }
+header { display:flex; justify-content:space-between; align-items:center; padding:26px 6%; border-bottom:1px solid #d6d6ca; gap:24px; flex-wrap:wrap; }
+.brand { color:$ink; font-size:24px; font-weight:800; letter-spacing:3px; text-decoration:none; span { display:block; font-size:9px; letter-spacing:2px; margin-top:4px; } }
+nav { display:flex; gap:28px; flex-wrap:wrap; a { color:$ink; text-decoration:none; padding:8px 0; &.active { border-bottom:2px solid $accent; } } }
+main { max-width:1280px; padding:48px 6%; margin:auto; min-height:75vh; }
+h1 { font-size:clamp(32px,4vw,54px); letter-spacing:-2px; margin:0 0 24px; }
+h2 { font-size:22px; } .eyebrow { color:$accent; letter-spacing:2px; font-size:12px; font-weight:700; }
+.hero { padding:42px 0; h1 { font-size:clamp(44px,6vw,82px); line-height:1.05; } > p:not(.eyebrow) { max-width:440px; color:#5c6359; } }
+button,.button { background:$accent; border:1px solid $accent; color:white; border-radius:4px; padding:12px 18px; text-decoration:none; cursor:pointer; font:inherit; display:inline-block; }
+.secondary { background:transparent; color:$accent; }
+.actions { display:flex; align-items:end; gap:14px; flex-wrap:wrap; margin:24px 0; }
+label { display:flex; flex-direction:column; gap:8px; font-size:14px; } input,select { font:inherit; padding:10px; border:1px solid #b4bbae; border-radius:4px; background:white; width:100%; } input[type=color] { height:44px; min-width:70px; }
+.stats { display:flex; gap:50px; margin-top:46px; strong { display:block; font-size:36px; } }
+.page-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+.add-form { background:#eaece2; padding:20px; display:flex; align-items:end; gap:16px; flex-wrap:wrap; label:first-child { flex:1; min-width:180px; } }
+.wardrobe-grid,.builder-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:28px 0; }
+.piece { border:1px solid #d5d9cc; background:#fffefa; padding:16px; h2 { margin:18px 0 6px; } p { color:#697160; } }
+.swatch { height:180px; display:flex; align-items:center; justify-content:center; border:1px solid #d1d4c7; border-radius:4px; span { background:#ffffffbf; padding:6px 12px; font-size:12px; letter-spacing:1px; } }
+.text-button { background:none; color:$accent; padding:0; border:0; text-decoration:underline; }
+.saved-heading { margin-top:42px; }.outfit-list article { padding:20px 0; border-top:1px solid #d4d8ca; }
+footer { padding:24px 6%; color:#5c6359; font-size:12px; border-top:1px solid #d6d6ca; }
+@media(max-width:650px) { .wardrobe-grid,.builder-grid { grid-template-columns:1fr; } main { padding-top:30px; } nav { gap:18px; } }
